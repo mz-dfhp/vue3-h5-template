@@ -8,10 +8,12 @@ const modules = import.meta.glob([
 ])
 
 const asyncRoutes: RouteRecordRaw[] = Object.entries(modules).map(([key, value]) => {
-  const path = key
+  let path = key
     .replace('../views', '')
-    .replace('.vue', '')
+    .replace(/\.(jsx|tsx|vue)$/, '')
     .replace(/\/index$/, '') || '/'
+
+  path = path.replace(/\[([^\]]+)\]/g, ':$1')
 
   return {
     path: path === '/index' ? '' : path,
