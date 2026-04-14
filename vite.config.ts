@@ -31,7 +31,7 @@ export default defineConfig({
     outDir: 'dist',
     minify: 'oxc',
     chunkSizeWarningLimit: 1500,
-    rollupOptions: {
+    rolldownOptions: {
       output: {
         // Static resource classification and packaging
         chunkFileNames: 'assets/js/[name]-[hash].js',
