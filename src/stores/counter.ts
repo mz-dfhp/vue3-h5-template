@@ -2,9 +2,8 @@ import { defineStore } from 'pinia'
 import { ref } from 'vue'
 import store from '@/stores'
 
-const pid = 'STORE__COUNTER'
 export const useCounterStore = defineStore(
-  pid,
+  'STORE__COUNTER',
   () => {
     const count = ref(0)
 

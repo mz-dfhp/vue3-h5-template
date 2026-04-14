@@ -6,9 +6,8 @@ export interface IUserInfo {
   username: string
 }
 
-const pid = 'STORE__USER'
 export const useUserStore = defineStore(
-  pid,
+  'STORE__USER',
   () => {
     const token = ref('token')
     const userInfo = ref<IUserInfo>({
