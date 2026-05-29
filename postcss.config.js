@@ -1,12 +1,19 @@
 export default {
   plugins: {
-    'postcss-px-to-viewport': {
-      viewportWidth: 375, // 设计稿宽度
-      unitPrecision: 5, // 转换后保留小数位数
-      viewportUnit: 'vw', // 目标单位
-      selectorBlackList: [], // 不转换的选择器
-      minPixelValue: 1, // 最小转换值
-      mediaQuery: false, // 是否转换媒体查询中的 px
+    'autoprefixer': {
+      overrideBrowserslist: [
+        '> 1%',
+        'last 2 versions',
+        'iOS >= 9',
+        'Safari >= 9',
+      ],
+    },
+    'postcss-pxtorem': {
+      rootValue() {
+        return 37.5
+      },
+      propList: ['*'],
+      selectorBlackList: ['html'], // 排除含有 'html' 选择器的代码块
     },
   },
 }

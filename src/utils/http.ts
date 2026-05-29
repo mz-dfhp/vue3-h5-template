@@ -53,3 +53,9 @@ http.interceptors.response.use(
     return Promise.reject(error)
   },
 )
+
+export interface ApiResponse<T = unknown> {
+  code: number
+  data: T
+  message: string
+}

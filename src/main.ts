@@ -5,6 +5,7 @@ import App from './App.vue'
 import { setupRouter } from './router'
 import './style.css'
 import 'vant/lib/index.css'
+import 'amfe-flexible'
 
 const app = createApp(App)
 
