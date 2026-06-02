@@ -8,8 +8,10 @@
   }
 }
 
+/* 16px → postcss → 16/37.5 = 0.4267rem */
+/* 0.4267rem × 37.5px = 16px  ← 实际渲染（与设计稿一致） */
 @media screen and (min-width: 768px) {
   html {
-    font-size: 50px !important;
+    font-size: 37.5px !important;
   }
 }
